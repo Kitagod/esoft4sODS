@@ -1,20 +1,20 @@
-package JoaoCarvalho.aula20200903.valueObjects;
+package AepOds.Cadastro.ValueObject;
 
 public class Cnpj {
     private String valor;
     public Cnpj(String valor){
-        if(validar(valor)==false){
-            throw new RuntimeException("CNPJ invalido");
+        if(validar(valor)){
+            this.valor = valor;           
         }
-        this.valor = valor;
+       // throw new RuntimeException("CNPJ invalido");
     }
 
     public String getValor() {
         return valor;
     }
-
     @Override
     public String toString() {
+        // TODO Auto-generated method stub
         return valor;
     }
 
@@ -77,4 +77,5 @@ public class Cnpj {
             }
         }
     }
+    
 }
